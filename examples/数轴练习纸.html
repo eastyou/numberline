@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数轴练习纸</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 7mm 4mm 9mm;
+    background: #e2e8f0;
+    color: #0f172a;
+    font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC",
+      "Source Han Sans SC", sans-serif;
+  }
+  .toolbar {
+    width: 210mm;
+    max-width: 100%;
+    margin: 0 auto 4mm;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    color: #334155;
+    font-size: 13px;
+  }
+  .toolbar strong { font-size: 15px; letter-spacing: 1px; }
+  .toolbar span { color: #64748b; font-size: 12px; }
+  .sheet {
+    width: 210mm;
+    max-width: 100%;
+    min-height: 297mm;
+    margin: 0 auto 6mm;
+    padding: 14mm 15mm 12mm;
+    background: #fff;
+    box-shadow: 0 6px 22px rgba(15, 23, 42, 0.14);
+    display: flex;
+    flex-direction: column;
+  }
+  .head { text-align: center; margin-bottom: 4mm; }
+  .head h1 {
+    margin: 0;
+    font-size: 20pt;
+    font-weight: 600;
+    letter-spacing: 4pt;
+  }
+  .head .sub {
+    margin: 1.8mm 0 0;
+    font-size: 9.5pt;
+    color: #475569;
+    letter-spacing: 0.4pt;
+  }
+  .lines {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .line { position: relative; padding: 1.5mm 0; }
+  .line .no {
+    position: absolute;
+    left: -1mm;
+    top: 1.5mm;
+    font-size: 8pt;
+    color: #94a3b8;
+  }
+  .line svg {
+    display: block;
+    width: 170mm;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .foot {
+    margin-top: 3mm;
+    padding-top: 2mm;
+    border-top: 0.2mm solid #e2e8f0;
+    display: flex;
+    align-items: baseline;
+    font-size: 8pt;
+    color: #64748b;
+  }
+  .foot .page { margin-left: auto; }
+  @media screen and (max-width: 640px) {
+    body { padding: 4mm 3mm 6mm; }
+    .sheet { padding: 8mm 6mm; min-height: 0; }
+    .head h1 { font-size: 16pt; letter-spacing: 2pt; }
+    .toolbar { flex-direction: column; gap: 2px; }
+    .line .no { left: 0; }
+  }
+  @page { size: A4 portrait; margin: 0; }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .toolbar { display: none; }
+    .sheet {
+      width: 210mm;
+      height: 297mm;
+      min-height: 0;
+      max-width: none;
+      margin: 0;
+      box-shadow: none;
+      padding: 14mm 15mm 12mm;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+    }
+    .sheet:last-child { page-break-after: auto; break-after: auto; }
+    .line svg { width: 170mm; max-width: none; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="toolbar"><strong>数轴练习纸</strong><span>4 条/页 · 共 1 页 · -10~10，每格 1</span></div>
+<main><section class="sheet"><header class="head"><h1>数轴练习纸</h1><p class="sub">从 -10 到 10 · 每格 1 · 每 2 个刻度留空</p></header><div class="lines"><div class="line"><span class="no">1</span><svg class="numberline" xmlns="http://www.w3.org/2000/svg" width="170mm" height="22mm" viewBox="0 0 170 22" role="img" aria-label="数轴，从 -10 到 10，每格 1"><g class="axis"><line x1="5" y1="10" x2="165" y2="10" stroke="#0f172a" stroke-width="0.4"/><polygon class="arrow" points="2.2,10 5,8.8 5,11.2" fill="#0f172a"/><polygon class="arrow" points="167.8,10 165,8.8 165,11.2" fill="#0f172a"/></g><g class="ticks"><line class="tick" x1="5" y1="8.6" x2="5" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="13" y1="8.6" x2="13" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="21" y1="8.6" x2="21" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="29" y1="8.6" x2="29" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="37" y1="8.6" x2="37" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="45" y1="8.6" x2="45" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="53" y1="8.6" x2="53" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="61" y1="8.6" x2="61" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="69" y1="8.6" x2="69" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="77" y1="8.6" x2="77" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick zero" x1="85" y1="7.8" x2="85" y2="12.2" stroke="#0f172a" stroke-width="0.7"/><line class="tick" x1="93" y1="8.6" x2="93" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="101" y1="8.6" x2="101" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="109" y1="8.6" x2="109" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="117" y1="8.6" x2="117" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="125" y1="8.6" x2="125" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="133" y1="8.6" x2="133" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="141" y1="8.6" x2="141" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="149" y1="8.6" x2="149" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="157" y1="8.6" x2="157" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="165" y1="8.6" x2="165" y2="11.4" stroke="#475569" stroke-width="0.35"/></g><g class="labels"><text class="label" x="5" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-10</text><text class="label" x="21" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-8</text><text class="label" x="37" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-6</text><text class="label" x="53" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-4</text><text class="label" x="69" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-2</text><text class="label zero" x="85" y="16.4" text-anchor="middle" font-size="3.2" font-weight="700" fill="#0f172a">0</text><text class="label" x="101" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">2</text><text class="label" x="117" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">4</text><text class="label" x="133" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">6</text><text class="label" x="149" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">8</text><text class="label" x="165" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">10</text></g></svg></div><div class="line"><span class="no">2</span><svg class="numberline" xmlns="http://www.w3.org/2000/svg" width="170mm" height="22mm" viewBox="0 0 170 22" role="img" aria-label="数轴，从 -10 到 10，每格 1"><g class="axis"><line x1="5" y1="10" x2="165" y2="10" stroke="#0f172a" stroke-width="0.4"/><polygon class="arrow" points="2.2,10 5,8.8 5,11.2" fill="#0f172a"/><polygon class="arrow" points="167.8,10 165,8.8 165,11.2" fill="#0f172a"/></g><g class="ticks"><line class="tick" x1="5" y1="8.6" x2="5" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="13" y1="8.6" x2="13" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="21" y1="8.6" x2="21" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="29" y1="8.6" x2="29" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="37" y1="8.6" x2="37" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="45" y1="8.6" x2="45" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="53" y1="8.6" x2="53" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="61" y1="8.6" x2="61" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="69" y1="8.6" x2="69" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="77" y1="8.6" x2="77" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick zero" x1="85" y1="7.8" x2="85" y2="12.2" stroke="#0f172a" stroke-width="0.7"/><line class="tick" x1="93" y1="8.6" x2="93" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="101" y1="8.6" x2="101" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="109" y1="8.6" x2="109" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="117" y1="8.6" x2="117" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="125" y1="8.6" x2="125" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="133" y1="8.6" x2="133" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="141" y1="8.6" x2="141" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="149" y1="8.6" x2="149" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="157" y1="8.6" x2="157" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="165" y1="8.6" x2="165" y2="11.4" stroke="#475569" stroke-width="0.35"/></g><g class="labels"><text class="label" x="5" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-10</text><text class="label" x="21" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-8</text><text class="label" x="37" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-6</text><text class="label" x="53" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-4</text><text class="label" x="69" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-2</text><text class="label zero" x="85" y="16.4" text-anchor="middle" font-size="3.2" font-weight="700" fill="#0f172a">0</text><text class="label" x="101" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">2</text><text class="label" x="117" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">4</text><text class="label" x="133" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">6</text><text class="label" x="149" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">8</text><text class="label" x="165" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">10</text></g></svg></div><div class="line"><span class="no">3</span><svg class="numberline" xmlns="http://www.w3.org/2000/svg" width="170mm" height="22mm" viewBox="0 0 170 22" role="img" aria-label="数轴，从 -10 到 10，每格 1"><g class="axis"><line x1="5" y1="10" x2="165" y2="10" stroke="#0f172a" stroke-width="0.4"/><polygon class="arrow" points="2.2,10 5,8.8 5,11.2" fill="#0f172a"/><polygon class="arrow" points="167.8,10 165,8.8 165,11.2" fill="#0f172a"/></g><g class="ticks"><line class="tick" x1="5" y1="8.6" x2="5" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="13" y1="8.6" x2="13" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="21" y1="8.6" x2="21" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="29" y1="8.6" x2="29" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="37" y1="8.6" x2="37" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="45" y1="8.6" x2="45" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="53" y1="8.6" x2="53" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="61" y1="8.6" x2="61" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="69" y1="8.6" x2="69" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="77" y1="8.6" x2="77" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick zero" x1="85" y1="7.8" x2="85" y2="12.2" stroke="#0f172a" stroke-width="0.7"/><line class="tick" x1="93" y1="8.6" x2="93" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="101" y1="8.6" x2="101" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="109" y1="8.6" x2="109" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="117" y1="8.6" x2="117" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="125" y1="8.6" x2="125" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="133" y1="8.6" x2="133" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="141" y1="8.6" x2="141" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="149" y1="8.6" x2="149" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="157" y1="8.6" x2="157" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="165" y1="8.6" x2="165" y2="11.4" stroke="#475569" stroke-width="0.35"/></g><g class="labels"><text class="label" x="5" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-10</text><text class="label" x="21" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-8</text><text class="label" x="37" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-6</text><text class="label" x="53" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-4</text><text class="label" x="69" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-2</text><text class="label zero" x="85" y="16.4" text-anchor="middle" font-size="3.2" font-weight="700" fill="#0f172a">0</text><text class="label" x="101" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">2</text><text class="label" x="117" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">4</text><text class="label" x="133" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">6</text><text class="label" x="149" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">8</text><text class="label" x="165" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">10</text></g></svg></div><div class="line"><span class="no">4</span><svg class="numberline" xmlns="http://www.w3.org/2000/svg" width="170mm" height="22mm" viewBox="0 0 170 22" role="img" aria-label="数轴，从 -10 到 10，每格 1"><g class="axis"><line x1="5" y1="10" x2="165" y2="10" stroke="#0f172a" stroke-width="0.4"/><polygon class="arrow" points="2.2,10 5,8.8 5,11.2" fill="#0f172a"/><polygon class="arrow" points="167.8,10 165,8.8 165,11.2" fill="#0f172a"/></g><g class="ticks"><line class="tick" x1="5" y1="8.6" x2="5" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="13" y1="8.6" x2="13" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="21" y1="8.6" x2="21" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="29" y1="8.6" x2="29" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="37" y1="8.6" x2="37" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="45" y1="8.6" x2="45" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="53" y1="8.6" x2="53" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="61" y1="8.6" x2="61" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="69" y1="8.6" x2="69" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="77" y1="8.6" x2="77" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick zero" x1="85" y1="7.8" x2="85" y2="12.2" stroke="#0f172a" stroke-width="0.7"/><line class="tick" x1="93" y1="8.6" x2="93" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="101" y1="8.6" x2="101" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="109" y1="8.6" x2="109" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="117" y1="8.6" x2="117" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="125" y1="8.6" x2="125" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="133" y1="8.6" x2="133" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="141" y1="8.6" x2="141" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="149" y1="8.6" x2="149" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="157" y1="8.6" x2="157" y2="11.4" stroke="#475569" stroke-width="0.35"/><line class="tick" x1="165" y1="8.6" x2="165" y2="11.4" stroke="#475569" stroke-width="0.35"/></g><g class="labels"><text class="label" x="5" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-10</text><text class="label" x="21" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-8</text><text class="label" x="37" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-6</text><text class="label" x="53" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-4</text><text class="label" x="69" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">-2</text><text class="label zero" x="85" y="16.4" text-anchor="middle" font-size="3.2" font-weight="700" fill="#0f172a">0</text><text class="label" x="101" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">2</text><text class="label" x="117" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">4</text><text class="label" x="133" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">6</text><text class="label" x="149" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">8</text><text class="label" x="165" y="16.4" text-anchor="middle" font-size="3.2" fill="#0f172a">10</text></g></svg></div></div><footer class="foot"><span class="tip">描点小提示：先在数轴上找到 0，再按刻度逐格数；正数向右，负数向左，最后用小圆点标出位置。</span><span class="page">第 1 页 / 共 1 页</span></footer></section></main>
+</body>
+</html>
